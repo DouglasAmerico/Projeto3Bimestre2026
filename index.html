@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Produtos - Aula Prática</title>
+    
+    <!-- Fonte Google Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Cabeçalho Principal -->
+        <header>
+            <h1>Dashboard de Produtos</h1>
+            <p>Demonstração simplificada de integração API PHP + TypeScript</p>
+        </header>
+
+        <!-- Grid com os 3 Cards de Resumo -->
+        <div class="cards-grid">
+            
+            <!-- Card 1: Quantidade Total de Produtos -->
+            <div class="card card-total">
+                <div class="card-label">Quantidade de Produtos</div>
+                <div id="card-total-produtos" class="card-value">Carregando...</div>
+            </div>
+
+            <!-- Card 2: Média de Preço dos Produtos -->
+            <div class="card card-media">
+                <div class="card-label">Média de Preço</div>
+                <div id="card-media-preco" class="card-value">Carregando...</div>
+            </div>
+
+            <!-- Card 3: Produto com Maior Estoque -->
+            <div class="card card-estoque">
+                <div class="card-label">Maior Estoque</div>
+                <div id="card-maior-estoque" class="card-value">Carregando...</div>
+            </div>
+
+        </div>
+
+        <!-- Tabela de Lista Completa de Produtos -->
+        <div class="tabela-container">
+            <h2 class="tabela-titulo">Lista de Produtos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Produto</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-produtos-body">
+                    <!-- Linhas preenchidas dinamicamente via TypeScript -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Script JavaScript compilado do TypeScript -->
+    <script src="dist/app.js"></script>
+
+</body>
+</html>
