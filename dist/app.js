@@ -31,21 +31,16 @@ function atualizarCards(produtos) {
     // --- 1. TOTAL DE PRODUTOS (Quantidade em número) ---
     const totalProdutos = produtos.length;
     // --- 2. MÉDIA DE PREÇO DOS PRODUTOS ---
-    // Somamos os preços de todos os produtos com um loop simples
-    let somaPrecos = 0;
-    for (const item of produtos) {
-        somaPrecos += Number(item.preco);
-    }
+    // Utilizando o método reduce() para somar o preço de todos os produtos do array
+    const somaPrecos = produtos.reduce((acumulador, item) => {
+        return acumulador + Number(item.preco);
+    }, 0);
     const mediaPreco = somaPrecos / totalProdutos;
     // --- 3. PRODUTO COM MAIOR ESTOQUE ---
-    // Começamos assumindo que o primeiro produto é o maior
-    let produtoMaiorEstoque = produtos[0];
-    // Percorremos a lista comparando o estoque de cada um
-    for (const item of produtos) {
-        if (Number(item.estoque) > Number(produtoMaiorEstoque.estoque)) {
-            produtoMaiorEstoque = item;
-        }
-    }
+    // Utilizando o método reduce() para comparar os estoques e retornar o produto com maior quantidade
+    const produtoMaiorEstoque = produtos.reduce((maior, item) => {
+        return Number(item.estoque) > Number(maior.estoque) ? item : maior;
+    }, produtos[0]);
     // --- ATUALIZAÇÃO DO HTML (DOM) ---
     // Card 1: Quantidade total de produtos
     const elTotal = document.getElementById('card-total-produtos');

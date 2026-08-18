@@ -141,6 +141,7 @@ http://localhost/Projeto3Bimestre2026/
 - **Headers no PHP:** Configuração de respostas `application/json` e permissão de acesso (CORS).
 - **Consultas SQL com `INNER JOIN`:** Relacionamento entre as tabelas `produto`, `subcategoria` e `categoria`.
 - **Requisições Assíncronas (`fetch`):** Consumo de APIs REST no frontend sem recarregar a página.
+- **Métodos Funcionais de Array (`reduce`):** Agregação e acúmulo de dados no frontend (cálculo de soma de preços/média e identificação do produto com maior estoque).
 - **Tipagem com TypeScript:** Declaração do `type Produto` para garantir previsibilidade e auto-completar no editor.
 - **Tratamento de Erros:** Estruturas `try...catch` tanto no backend (PDOExceptions) quanto no frontend (Network errors).
 
